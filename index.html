@@ -11,10 +11,25 @@
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/vrTest3.json", {onProgress: UnityProgress});
     </script>
+    <style>
+      .jiege{
+        font-size: 18px;
+        font-weight: bold;
+        animation:mymove 2s infinite;
+        position: relative;
+        min-height: 50px;
+      }
+      @keyframes mymove
+      {
+        0% {left:0px; color: green; font-size: 18px}
+        50% {left:200px; color: red; font-size: 26px}
+        100% {left:0px; color: blue; font-size: 18px}
+      }
+    </style>
   </head>
   <body>
     <div class="webgl-content">
-      <div>杰哥看一哈行了不</div>
+      <div class="jiege">杰哥看一哈行了不</div>
       <div id="gameContainer" style="width: 960px; height: 600px"></div>
       <div class="footer">
         <div class="webgl-logo"></div>
